@@ -1,7 +1,6 @@
-import { homePage } from "../pages/actions/verifyHomePage";
-import { landingPageElements } from "../pages/elements/landingPage.elements";
-const actions = new homePage();
-const lpEle = new landingPageElements();
+import { loginActions } from "../pages/actions/login.actions";
+
+const actions = new loginActions();
 
 describe("Login", () => {
   it("Standard User", () => {
@@ -12,12 +11,7 @@ describe("Login", () => {
 
   it("Locaked Out User", () => {
     cy.loginAs("lockedOut");
-    lpEle
-      .error()
-      .should("be.visible")
-      .and("contain.text", "Sorry, this user has been locked out.");
-    lpEle.errorIcons().should("be.visible").and("have.length", 2);
-    lpEle.errorCloseBtn().should("be.visible").click();
+    actions.verifyError_loginWithLockedUser();
   });
 
   it("Problem User", () => {
@@ -46,14 +40,6 @@ describe("Login", () => {
 
   it("Invalid Credential User", () => {
     cy.loginAs("invalid");
-    lpEle
-      .error()
-      .should("be.visible")
-      .and(
-        "contain.text",
-        "Username and password do not match any user in this service",
-      );
-    lpEle.errorIcons().should("be.visible").and("have.length", 2);
-    lpEle.errorCloseBtn().should("be.visible").click();
+    actions.verifyError_loginWithInvalidUser();
   });
 });
