@@ -18,7 +18,7 @@ This repository demonstrates a complete end-to-end **Cypress Test Automation Fra
 
 ### 3. Setup Environment Variables
 
-Create a .env file in the root and paste [this](https://github.com/ajeetkumar955/Cypress-Automation-Framework/wiki/Credentials-for-.env-file) value.
+Create a cypress.env.json file in the root and paste [this](https://github.com/ajeetkumar955/Cypress-Automation-Framework/wiki/Credentials-for-.env-file) value.
 
 ### 4. Open Cypress Test Runner And Run Tests
 
