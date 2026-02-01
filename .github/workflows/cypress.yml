@@ -2,9 +2,7 @@ name: Cypress Tests
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -12,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -20,18 +18,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Run Cypress Tests
+      - name: Run Cypress tests
         run: npx cypress run
         env:
-          CYPRESS_baseUrl: ${{ secrets.BASE_URL }}
-          CYPRESS_standard: ${{ secrets.STANDARD }}
-          CYPRESS_lockedOut: ${{ secrets.LOCKED_OUT }}
-          CYPRESS_problem: ${{ secrets.PROBLEM }}
-          CYPRESS_performanceGlitch: ${{ secrets.PERFORMANCE_GLITCH }}
-          CYPRESS_error: ${{ secrets.ERROR }}
-          CYPRESS_visual: ${{ secrets.VISUAL }}
-          CYPRESS_invalid: ${{ secrets.INVALID }}
-          CYPRESS_password: ${{ secrets.PASSWORD }}
+          CYPRESS_BASE_URL: ${{ secrets.BASE_URL }}
+          CYPRESS_STANDARD: ${{ secrets.STANDARD }}
+          CYPRESS_LOCKED_OUT: ${{ secrets.LOCKED_OUT }}
+          CYPRESS_PROBLEM: ${{ secrets.PROBLEM }}
+          CYPRESS_PERFORMANCE_GLITCH: ${{ secrets.PERFORMANCE_GLITCH }}
+          CYPRESS_ERROR: ${{ secrets.ERROR }}
+          CYPRESS_VISUAL: ${{ secrets.VISUAL }}
+          CYPRESS_INVALID: ${{ secrets.INVALID }}
+          CYPRESS_PASSWORD: ${{ secrets.PASSWORD }}
