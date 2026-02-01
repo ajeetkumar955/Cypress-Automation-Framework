@@ -1,3 +1,6 @@
 node_modules/
 .env
 cypress.env.json
+reports/
+screenshots/
+videos/

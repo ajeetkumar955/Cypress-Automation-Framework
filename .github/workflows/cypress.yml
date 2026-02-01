@@ -33,3 +33,9 @@ jobs:
           CYPRESS_visual: ${{ secrets.VISUAL }}
           CYPRESS_invalid: ${{ secrets.INVALID }}
           CYPRESS_password: ${{ secrets.PASSWORD }}
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cypress-mochawesome-report
+          path: cypress/reports/
