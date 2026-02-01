@@ -4,8 +4,7 @@ Scalable Cypress automation framework using Page Object Model (POM), custom comm
 
 ## 🚀 Overview
 
-This repository demonstrates a complete end-to-end **Cypress Test Automation Framework** built for the SauceDemo application.  
-It uses:
+This repository demonstrates a complete end-to-end **Cypress Test Automation Framework** built for the SauceDemo application.
 
 ## ⚙️ Setup Instructions
 
@@ -32,5 +31,4 @@ Select browser > Select Test to run
 
 ## 📝 Author
 
-Ajeet Kumar
-Automation Engineer | QA | Cypress Automation
+Ajeet Kumar | QA Automation Engineer | Cypress Automation
