@@ -1,4 +1,4 @@
-import { homePageElements } from "../pages/elements/homepage.elements";
+import { homePageElements } from "../pages/elements/homePage.elements";
 import { landingPageElements } from "../pages/elements/landingPage.elements";
 const hpEle = new homePageElements();
 const lpEle = new landingPageElements();
