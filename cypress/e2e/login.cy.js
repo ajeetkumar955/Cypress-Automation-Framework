@@ -9,7 +9,7 @@ describe("Login", () => {
     cy.logout();
   });
 
-  it("Locaked Out User", () => {
+  it("Locked Out User", () => {
     cy.loginAs("lockedOut");
     actions.verifyError_loginWithLockedUser();
   });
