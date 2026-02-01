@@ -25,3 +25,13 @@ jobs:
 
       - name: Run Cypress Tests
         run: npx cypress run
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          STANDARD: ${{ secrets.STANDARD }}
+          LOCKED_OUT: ${{ secrets.LOCKED_OUT }}
+          PROBLEM: ${{ secrets.PROBLEM }}
+          PERFORMANCE_GLITCH: ${{ secrets.PERFORMANCE_GLITCH }}
+          ERROR: ${{ secrets.ERROR }}
+          VISUAL: ${{ secrets.VISUAL }}
+          INVALID: ${{ secrets.INVALID }}
+          PASSWORD: ${{ secrets.PASSWORD }}
